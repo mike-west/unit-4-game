@@ -6,7 +6,14 @@ var randomNumber = 0;
 var gemValues = [0, 0, 0, 0];
 
 
-$(document).ready(function() {
+$(document).ready(function () {
+    function init() {
+        count = 0;
+        runningScore = 0;
+        randomNumber = 0;
+        gemValues = [0, 0, 0, 0];
+    }
+
     function updateHtml() {
         $("#count").text(count);
         $("#wins").text(wins);
@@ -14,18 +21,32 @@ $(document).ready(function() {
         $("#running-score").text(runningScore);
         $("#rnd-num").text(randomNumber);
     }
-    
+
     function randomValues() {
-        for (var i=0; i<gemValues.length; ++i) {
+        for (var i = 0; i < gemValues.length; ++i) {
             gemValues[i] = Math.floor(Math.random() * (12 - 1) + 1);
         }
-        randomNumber = Math.floor(Math.random() * (120 -19) + 19);
+        randomNumber = Math.floor(Math.random() * (120 - 19) + 19);
     }
 
-    $(".gem").on("click", function() {
+    $(".gem").on("click", function () {
         value = gemValues[$(this).attr('value')];
         runningScore += value;
         updateHtml();
+
+        if (runningScore === randomNumber) {
+            alert("You are a winner!");
+            ++wins;
+            init();
+            randomValues();
+            updateHtml();
+        } else if (runningScore > randomNumber) {
+            alert("Sorry you went over.")
+            ++losses;
+            init();
+            randomValues();
+            updateHtml();
+        }
     });
 
     randomValues();
