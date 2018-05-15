@@ -10,11 +10,15 @@ div * {
   border-radius: 30px;
 }
 
-#head h1 {
+#header-wrapper {
+  background-color: #000000;
+}
+
+#header h1 {
   border-width: 0px;
 }
 
-#head {
+#header {
   background-color: orchid;
   font-size: large;
 }
