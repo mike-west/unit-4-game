@@ -14,8 +14,18 @@ div * {
   border-width: 0px;
 }
 
+#head {
+  background-color: orchid;
+  font-size: large;
+}
+
 #instructions p {
   border-width: 0px;
+}
+
+#instructions {
+  background-color: silver;
+  font-size: medium;
 }
 
 .text-left {
@@ -25,4 +35,10 @@ div * {
 .text-right {
   border-width: 0px;
 }
+
+.empty {
+  background-color: #000000;
+}
+
+
 
