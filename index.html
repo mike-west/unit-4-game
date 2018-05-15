@@ -11,6 +11,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src='assets/javascript/game.js'></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
         <!-- one row of 2, 3, 5 and 2 columns -->
         <div id="count_and_scores" class="row">
             <div class="col-sm-2 col-2 empty"> </div>
-            <div id="count" class="col-sm-3 col-3 text-center">0</div>
+            <div id="rnd-num" class="col-sm-3 col-3 text-center">0</div>
             <div id="scores" class="col-sm-5 col-3">
                 <div id="wins_row" class="row">
                     <div class="class-sm-9 col-9 text-left">Wins:</div>
@@ -47,10 +48,10 @@
         <div class="row">
             <div class="col-sm-2 col-2 empty"> </div>
             <div id="gems" class="col-sm-8 col-8">
-                <button id="gem0" type="button" class="btn btn-primary btn-lg gem"> </button>
-                <button id="gem1" type="button" class="btn btn-success btn-lg gem"> </button>
-                <button id="gem2" type="button" class="btn btn-warning btn-lg gem"> </button>
-                <button id="gem3" type="button" class="btn btn-danger btn-lg gem"> </button>
+                <button id="gem0" type="button" class="btn btn-primary btn-lg gem" value="0"> </button>
+                <button id="gem1" type="button" class="btn btn-success btn-lg gem" value="1"> </button>
+                <button id="gem2" type="button" class="btn btn-warning btn-lg gem" value="2"> </button>
+                <button id="gem3" type="button" class="btn btn-danger btn-lg gem" value="3"> </button>
             </div>
             <div class="col-sm-2 col-2 empty"> </div>
         </div>
