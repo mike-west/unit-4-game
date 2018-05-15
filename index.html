@@ -16,41 +16,68 @@
 <body>
 
     <div class="container-fluid">
-        <div id='head' class="jumbotron">
+        <div id='head' class="jumbotron text-center">
             <h1>Crystal Collector</h1>
         </div>
         <div id='instructions' class="jumbotron">
-            <p>Many instructions here.</p>
+            <p>You will be given a random number at the start of the game.</p>
+            <p>There will be four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p>
+            <p>You win the game by matching your total to a random number, you loose the game if your total score goes above the random number.</p>
+            <p>The value of each crystal is hidden from you until you click on it</p>
+            <p>Each time the game starts, the game will change the value of each crystal.</p>
         </div>
 
-        <!-- below this point need rows and cols or new container -->
-        <div id='random_num' class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+        <!-- one row of 2, 3, 5 and 2 columns -->
+        <div id="count_and_scores" class="row">
+            <div class="col-sm-2 col-2 empty"> </div>
+            <div id="count" class="col-sm-3 col-3 text-center">0</div>
+            <div id="scores" class="col-sm-5 col-3">
+                <div id="wins_row" class="row">
+                    <div class="class-sm-9 col-9 text-left">Wins:</div>
+                    <div id='wins' class="class-sm-3 col-3 text-right">0</div>
                 </div>
-              </div>
-              <div id='ongoing_score' class="card" style="width: 6rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
+                <div id="losses_row" class="row">
+                    <div class="class-sm-9 col-9 text-left">Losses:</div>
+                    <div id='Losses' class="class-sm-3 col-3 text-right">0</div>
+                </div>
+            </div>
+            <div class="col-sm-2 col-2 empty"> </div>
+        </div>
+        <!-- one row of 2, 8 and 2 columns-->
+        <div class="row">
+            <div class="col-sm-2 col-2 empty"> </div>
+            <div id="gems" class="col-sm-8 col-8">
+                <button id="gem0" type="button" class="btn btn-primary btn-lg gem"> </button>
+                <button id="gem1" type="button" class="btn btn-success btn-lg gem"> </button>
+                <button id="gem2" type="button" class="btn btn-warning btn-lg gem"> </button>
+                <button id="gem3" type="button" class="btn btn-danger btn-lg gem"> </button>
+            </div>
+            <div class="col-sm-2 col-2 empty"> </div>
+        </div>
+        <!-- one row of 2 and 10 -->
+        <div class="row">
+            <div class="col-sm-2 col-2 empty"> </div>
+            <div class="col-sm-10 col-10 empty">
+                <h1>Your total score is:</h1>
+            </div>
+        </div>
+        <!-- one row of 2 and 10 -->
+        <div class="row">
+            <div class="col-sm-2 col-2 empty"> </div>
+            <div class="col-sm-10 col-10 empty">
+                <h1 id="running-score" class="text-center">0</h1>
+            </div>
 
-    </div>
+        </div>
 
 
-    <!-- requred for Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+        <!-- requred for Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
