@@ -10,8 +10,8 @@ div * {
   border-radius: 30px;
 }
 
-#header-wrapper {
-  background-color: #000000;
+.header-wrapper {
+  background-color: #000000;  
 }
 
 #header h1 {
